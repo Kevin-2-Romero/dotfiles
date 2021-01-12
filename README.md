@@ -8,5 +8,4 @@ Eventually I plan on adding my zathura config as well as spotify + spicetify.
 - **Editor:** Neovim + vim-plug
 
 # Screenshots
----
 ![screenshot1](screenshots/image1.png)
