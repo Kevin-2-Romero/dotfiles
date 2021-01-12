@@ -6,6 +6,7 @@ Eventually I plan on adding my zathura config as well as spotify + spicetify.
 - **WM:** i3-gaps
 - **Terminal:** Alacritty
 - **Editor:** Neovim + vim-plug
+- **Colorscheme:** [Based on this post](https://www.reddit.com/r/unixporn/comments/kssnqs/yabai_pink/)
 
 # Screenshots
 ![screenshot1](screenshots/image1.png)
