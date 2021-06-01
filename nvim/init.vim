@@ -28,3 +28,8 @@ colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
+
+
+" Set the filetype based on the file's extension, overriding any
+" 'filetype' that has already been set
+au BufRead,BufNewFile *.asm set filetype=asm
