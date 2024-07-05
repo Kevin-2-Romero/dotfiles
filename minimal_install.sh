@@ -11,16 +11,20 @@ git \
 python3 python3-pip \
 zsh \
 vim \
+tmux \
 unzip
-
-# Change default shell to zsh
-sudo chsh -s /bin/zsh
 
 # Set path variable:
 echo 'PATH=$PATH:/usr/local/go/bin:/home/$current_user/.local/bin' >> ~/.zshrc
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set path variable:
+echo 'PATH=$PATH:/usr/local/go/bin:/home/$current_user/.local/bin' >> ~/.zshrc
+
+# Change default shell to zsh
+sudo chsh -s /bin/zsh
 
 # Install python3 virtual environments
 python3 -m pip install virtualenv
