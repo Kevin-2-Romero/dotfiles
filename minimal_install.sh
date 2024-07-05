@@ -5,9 +5,14 @@ mkdir ~/.config
 
 sudo apt update
 sudo apt install -y \
+git \
+python3 python3-pip \
 zsh \
 vim \
 unzip
+
+# Install python3 virtual environments
+python3 -m pip install virtualenv
 
 # Install vscode
 sudo apt-get install -y wget gpg
