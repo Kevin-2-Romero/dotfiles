@@ -60,7 +60,7 @@ fc-cache -f -v
 
 # Install starship terminal
 curl -sS https://starship.rs/install.sh | sh
-echo 'eval "$(starship init zsh)"'
+echo 'eval "$(starship init zsh)"' >> ~./zshrc
 
 # Set theme to custom dracula:
 wget https://raw.githubusercontent.com/Kvn11/dotfiles/master/alacritty/alacritty.toml -O ~/.config/alacritty/alacritty.toml
