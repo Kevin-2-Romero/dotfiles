@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-current_user=$USER
+current_user="$USER"
 mkdir ~/.config
 
 sudo apt update
@@ -10,7 +10,7 @@ vim \
 unzip
 
 # Install vscode
-sudo apt-get install wget gpg
+sudo apt-get install -y wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
@@ -19,6 +19,12 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
 
+# Install alacritty
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt update
+sudo apt install -y alacritty
+
+# Set up ssh keys
 ssh-keygen -f ~/.ssh/id_rsa
 eval "$(ssh-agent -s)"
 
@@ -34,7 +40,6 @@ export PATH=$PATH:/usr/local/go/bin
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip -O ~/Downloads/FiraCode.zip
 sudo mkdir -p /usr/local/share/fonts/FiraCode && sudo unzip /home/$current_user/Downloads/FiraCode.zip -d /usr/local/share/fonts/FiraCode/
 fc-cache -f -v
-
 
 # Install starship terminal
 curl -sS https://starship.rs/install.sh | sh
