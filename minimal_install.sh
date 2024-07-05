@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 current_user="$USER"
-mkdir ~/.config
+mkdir -p ~/.config
 
 sudo apt update
 sudo apt install -y \
