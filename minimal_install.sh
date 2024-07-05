@@ -13,6 +13,9 @@ zsh \
 vim \
 unzip
 
+# Change default shell to zsh
+sudo chsh -s /bin/zsh
+
 # Install python3 virtual environments
 python3 -m pip install virtualenv
 
