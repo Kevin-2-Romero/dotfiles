@@ -5,6 +5,7 @@ mkdir -p ~/.config
 
 sudo apt update
 sudo apt install -y \
+curl wget \
 git \
 python3 python3-pip \
 zsh \
