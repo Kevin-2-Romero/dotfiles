@@ -16,6 +16,12 @@ unzip
 # Change default shell to zsh
 sudo chsh -s /bin/zsh
 
+# Set path variable:
+echo 'PATH=$PATH:/usr/local/go/bin:/home/$current_user/.local/bin' >> ~/.zshrc
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Install python3 virtual environments
 python3 -m pip install virtualenv
 
@@ -45,8 +51,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cd /home/$current_user/Downloads
 wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
-echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:/home/$current_user/.local/bin
 
 # Install FiracodeFont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip -O ~/Downloads/FiraCode.zip
@@ -55,6 +60,7 @@ fc-cache -f -v
 
 # Install starship terminal
 curl -sS https://starship.rs/install.sh | sh
+echo 'eval "$(starship init zsh)"'
 
 # Set theme to custom dracula:
 wget https://raw.githubusercontent.com/Kvn11/dotfiles/master/alacritty/alacritty.toml -O ~/.config/alacritty/alacritty.toml
