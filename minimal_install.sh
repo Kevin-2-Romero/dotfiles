@@ -41,7 +41,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install golang
 cd /home/$current_user/Downloads
 wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
+rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
 echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
 export PATH=$PATH:/usr/local/go/bin
 
