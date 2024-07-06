@@ -14,9 +14,6 @@ vim \
 tmux \
 unzip
 
-# Set path variable:
-echo 'PATH=$PATH:/usr/local/go/bin:/home/$current_user/.local/bin' >> ~/.zshrc
-
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
